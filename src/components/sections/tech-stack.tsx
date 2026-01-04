@@ -38,7 +38,7 @@ export function TechStack() {
                             whileInView={{ opacity: 1, scale: 1 }}
                             transition={{ duration: 0.4, delay: index * 0.1 }}
                             viewport={{ once: true }}
-                            className="p-6 rounded-2xl bg-card/50 backdrop-blur-sm border border-border/50 hover:border-primary/50 transition-colors group"
+                            className="p-6 rounded-2xl bg-background/20 backdrop-blur-md border border-white/10 hover:border-primary/50 transition-colors group"
                         >
                             <div className="flex items-center gap-3 mb-4">
                                 <div className="p-2 rounded-lg bg-secondary text-foreground group-hover:bg-primary group-hover:text-primary-foreground transition-colors">

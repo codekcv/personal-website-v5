@@ -54,7 +54,7 @@ export function Projects() {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: index * 0.2 }}
                             viewport={{ once: true }}
-                            className="group relative flex flex-col justify-between h-full p-6 rounded-3xl bg-card/80 backdrop-blur-md border border-border/50 overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
+                            className="group relative flex flex-col justify-between h-full p-6 rounded-3xl bg-background/20 backdrop-blur-md border border-white/10 overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
                         >
                             {/* Decorative Gradient Background on Hover */}
                             <div className={`absolute inset-0 bg-gradient-to-br ${project.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
@@ -79,7 +79,7 @@ export function Projects() {
 
                             <div className="relative z-10 flex flex-wrap gap-2 mt-auto">
                                 {project.tags.map(tag => (
-                                    <span key={tag} className="px-3 py-1 text-xs font-medium rounded-full bg-background/80 border border-foreground/5">
+                                    <span key={tag} className="px-3 py-1 text-xs font-medium rounded-full bg-background/40 backdrop-blur-sm border border-foreground/5">
                                         {tag}
                                     </span>
                                 ))}
