@@ -56,7 +56,7 @@ export function Experience() {
                             {/* Timeline Dot */}
                             <div className="absolute -left-[5px] top-2 w-2.5 h-2.5 rounded-full bg-primary ring-4 ring-background" />
 
-                            <div className="flex flex-col gap-2 p-6 rounded-2xl bg-card border border-border/40 hover:border-border transition-colors shadow-sm">
+                            <div className="flex flex-col gap-2 p-6 rounded-2xl bg-background/20 backdrop-blur-md border border-white/10 hover:border-border transition-colors shadow-sm">
                                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
                                     <h3 className="text-xl font-bold flex items-center gap-2">
                                         <Briefcase className="w-4 h-4 text-primary" />

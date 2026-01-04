@@ -14,7 +14,7 @@ export function Contact() {
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.5 }}
                     viewport={{ once: true }}
-                    className="relative p-8 md:p-12 rounded-3xl bg-card/80 backdrop-blur-md border border-border/50 text-center overflow-hidden"
+                    className="relative p-8 md:p-12 rounded-3xl bg-background/20 backdrop-blur-md border border-white/10 text-center overflow-hidden"
                 >
                     <div className="relative z-10 flex flex-col items-center gap-6">
                         <h2 className="text-3xl md:text-5xl font-bold tracking-tight">Let's Connect</h2>
