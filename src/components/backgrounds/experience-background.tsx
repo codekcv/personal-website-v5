@@ -4,40 +4,109 @@ import { motion } from "framer-motion"
 
 export function ExperienceBackground() {
     return (
-        <div className="absolute inset-0 bg-background overflow-hidden flex items-center justify-center">
-            {/* Warm gradient spot */}
+        <div className="absolute inset-0 bg-background overflow-hidden flex items-center justify-center pointer-events-none">
+            {/* Ambient Warmth */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] bg-orange-500/5 rounded-full blur-[120px]" />
 
-            <svg className="absolute w-full h-full opacity-30" preserveAspectRatio="none">
-                <motion.path
-                    initial={{ d: "M0,50 Q200,100 400,50 T800,50" }}
-                    animate={{
-                        d: [
-                            "M0,50 Q200,100 400,50 T1600,50",
-                            "M0,50 Q200,0 400,50 T1600,50",
-                            "M0,50 Q200,100 400,50 T1600,50"
-                        ]
-                    }}
-                    transition={{
-                        duration: 10,
-                        repeat: Infinity,
-                        ease: "easeInOut"
-                    }}
-                    fill="none"
-                    stroke="url(#gradient)"
-                    strokeWidth="2"
-                />
-                <defs>
-                    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                        <stop offset="0%" stopColor="transparent" />
-                        <stop offset="50%" stopColor="var(--border)" />
-                        <stop offset="100%" stopColor="transparent" />
-                    </linearGradient>
-                </defs>
-            </svg>
+            <div className="w-full max-w-7xl flex justify-between h-full px-4 md:px-12">
+                {/* Left Vertical Wave */}
+                <div className="h-full w-[200px] opacity-20">
+                    <svg className="w-full h-full" preserveAspectRatio="none" viewBox="0 0 100 800">
+                        <defs>
+                            <linearGradient id="waveGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                                <stop offset="0%" stopColor="transparent" />
+                                <stop offset="50%" stopColor="var(--foreground)" />
+                                <stop offset="100%" stopColor="transparent" />
+                            </linearGradient>
+                        </defs>
+                        <motion.path
+                            initial={{ d: "M50,0 Q90,200 50,400 T50,800" }}
+                            animate={{
+                                d: [
+                                    "M50,0 Q90,200 50,400 T50,800",
+                                    "M50,0 Q10,200 50,400 T50,800",
+                                    "M50,0 Q90,200 50,400 T50,800"
+                                ]
+                            }}
+                            transition={{
+                                duration: 10,
+                                repeat: Infinity,
+                                ease: "easeInOut"
+                            }}
+                            fill="none"
+                            stroke="url(#waveGradient)"
+                            strokeWidth="2"
+                        />
+                        {/* Secondary echo wave */}
+                        <motion.path
+                            initial={{ d: "M50,0 Q10,200 50,400 T50,800" }}
+                            animate={{
+                                d: [
+                                    "M50,0 Q10,200 50,400 T50,800",
+                                    "M50,0 Q90,200 50,400 T50,800",
+                                    "M50,0 Q10,200 50,400 T50,800"
+                                ]
+                            }}
+                            transition={{
+                                duration: 15,
+                                repeat: Infinity,
+                                ease: "easeInOut",
+                                delay: 1
+                            }}
+                            fill="none"
+                            stroke="url(#waveGradient)"
+                            strokeWidth="1"
+                            opacity="0.5"
+                        />
+                    </svg>
+                </div>
 
-            {/* Vertical Line pattern */}
-            <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px)] bg-[size:10%_100%] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_50%,#000_70%,transparent_100%)]" />
+                {/* Right Vertical Wave */}
+                <div className="h-full w-[200px] opacity-20">
+                    <svg className="w-full h-full" preserveAspectRatio="none" viewBox="0 0 100 800">
+                        <motion.path
+                            initial={{ d: "M50,0 Q10,200 50,400 T50,800" }}
+                            animate={{
+                                d: [
+                                    "M50,0 Q10,200 50,400 T50,800",
+                                    "M50,0 Q90,200 50,400 T50,800",
+                                    "M50,0 Q10,200 50,400 T50,800"
+                                ]
+                            }}
+                            transition={{
+                                duration: 12,
+                                repeat: Infinity,
+                                ease: "easeInOut",
+                                delay: 2
+                            }}
+                            fill="none"
+                            stroke="url(#waveGradient)"
+                            strokeWidth="2"
+                        />
+                        {/* Secondary echo wave */}
+                        <motion.path
+                            initial={{ d: "M50,0 Q90,200 50,400 T50,800" }}
+                            animate={{
+                                d: [
+                                    "M50,0 Q90,200 50,400 T50,800",
+                                    "M50,0 Q10,200 50,400 T50,800",
+                                    "M50,0 Q90,200 50,400 T50,800"
+                                ]
+                            }}
+                            transition={{
+                                duration: 18,
+                                repeat: Infinity,
+                                ease: "easeInOut",
+                                delay: 3
+                            }}
+                            fill="none"
+                            stroke="url(#waveGradient)"
+                            strokeWidth="1"
+                            opacity="0.5"
+                        />
+                    </svg>
+                </div>
+            </div>
         </div>
     )
 }
